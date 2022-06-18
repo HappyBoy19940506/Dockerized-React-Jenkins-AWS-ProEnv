@@ -40,3 +40,14 @@ https://stackabuse.com/how-to-fix-warning-unprotected-private-key-file-on-mac-an
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 ```
+
+
+## java install
+```
+Master node: java / jenkins 
+
+Slave node: java / nodeJS
+
+NOTED: JAVA SHOULD BE ALSO INSTALLED ON SLAVE NODE, 因为你仅仅ssh了两者，其实 双方还要互相发送一个jar的包 才能是Jenkins互相连接，你没java 怎么运行jar的包？？
+```
+
