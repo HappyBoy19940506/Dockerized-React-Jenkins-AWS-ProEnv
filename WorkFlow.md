@@ -43,6 +43,12 @@
          --BLUE OCEAN
          ??
      
+     JENKINS SCRIPT-
+     -Jenkinsfile
+     -connect to github ? webhook? git token?
+     
+     
+     
  ```
 
   ## 3 code dockerize
