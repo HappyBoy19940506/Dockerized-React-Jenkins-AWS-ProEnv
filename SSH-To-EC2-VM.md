@@ -33,3 +33,10 @@ sudo ssh -i /Users/user/.ssh/fxy4560654/ssh-key.pem fxy4560654@jenkinsslonment.a
 ```
 https://stackabuse.com/how-to-fix-warning-unprotected-private-key-file-on-mac-and-linux/
 ```
+
+## How to install NVM
+
+```
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+```
