@@ -25,6 +25,6 @@ e.g /Users/user/.ssh/fxy4560654/Slave-Jenkins-for-Nodejs-ssh-key.pem
 ## use SUDO
 
 ```
-sudo ssh -i /Users/user/.ssh/fxy4560654/Slave-Jenkins-for-Nodejs-ssh-key.pem fxy4560654@fxy4560654jenkinsslonment.australiaeast.cloudapp.azure.com
+sudo ssh -i /Users/user/.ssh/fxy4560654/Slave-Jenkins-for-Nodejs-ssh-key.pem fxy4560654@jenkinsslonment.australiaeast.cloudapp.azure.com
 
 ```
