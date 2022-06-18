@@ -31,7 +31,7 @@
       install Node JS ... version issue ?
 ```
       
-  ## 2 play JENKINS
+  ## 2 play JENKINS CONTROLLER. with One Agent 
 ```
      go in to jenkins
       -initialize ?
