@@ -32,27 +32,44 @@
   ## 2 play JENKINS
      ```
      go in to jenkins
-     blue ocean --> link github
+     plugin install 
+         -- CREDITONALS
+         -- FOR AWS
+         -- FOR AZURE
+         --BLUE OCEAN
      
-     jenkinsfile - test build test
       
       ````
 
   ## 3 code dockerize
       ```
-      write dockerfile for prod and dev
-      
-      local test
+      NO.  FRONT end does not need to dockerize.
       
       ````
 ## 4 deploy
     ```
-    create a s3 
+    For dev
+    -CREATE agent Jenkins
     
-    secure s3 with jenkins pipeline
     
-    dev - docker run on jenkins ec2. port out 3000, can visit
+     IF something pushed in MASTER/DEV Branch :
+        BUILD
+        TEST
+        DEPLOY by 'Npm START' in Jenkins NODE-JS AGENT
+
+        --> You can see a website at xxxxxxurl:3000
     
-    prod - docker run , cp build folder aws s3 
     
+    For Prod
+    -Create a S3
+    -Open port
+    -security group?
+    
+      If something pushed in Prod Branch: 
+       BUILD
+       TEST
+       DEPLOY by 'NPM RUN BUILD' ---> upload THE build Folder to a Hosting e.g. S3 / Azure Blob
+                                            
+  
+      ----> Folder upload to s3, you can use s3 url to visit the website ---> CLOUDFRONT(CDN) --->ROUTE 53 DOMAIN
     ```
