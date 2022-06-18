@@ -29,6 +29,7 @@
       Create a ec2 for Slave Jenkins
       on Agent Node -->
       install Node JS ... version issue ?
+      ** slave机子上 也要装java ！！！
 ```
       
   ## 2 play JENKINS CONTROLLER. with One Agent 
