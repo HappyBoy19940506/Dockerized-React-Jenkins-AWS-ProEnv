@@ -32,16 +32,18 @@
 ```
       
   ## 2 play JENKINS
-     ```
+```
      go in to jenkins
+      -initialize ?
+      
      plugin install 
          -- CREDITONALS
          -- FOR AWS
          -- FOR AZURE
          --BLUE OCEAN
+         ??
      
-     
-      ```
+ ```
 
   ## 3 code dockerize
 ```
