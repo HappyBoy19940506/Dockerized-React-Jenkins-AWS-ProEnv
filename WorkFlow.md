@@ -7,7 +7,7 @@
         TEST
         DEPLOY by 'Npm START' in Jenkins NODE-JS AGENT
 
-        --> You can see a website at xxxxxxurl:3000
+        --> You can see a website at xxxxxxjenkins-agent-url:3000
 
   If something pushed in Prod Branch: 
        BUILD
