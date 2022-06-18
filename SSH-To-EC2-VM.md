@@ -28,3 +28,8 @@ e.g /Users/user/.ssh/fxy4560654/ssh-key.pem
 sudo ssh -i /Users/user/.ssh/fxy4560654/ssh-key.pem fxy4560654@jenkinsslonment.australiaeast.cloudapp.azure.com
 
 ```
+
+## How to Fix "WARNING: UNPROTECTED PRIVATE KEY FILE!" on Mac and Linux
+```
+https://stackabuse.com/how-to-fix-warning-unprotected-private-key-file-on-mac-and-linux/
+```
