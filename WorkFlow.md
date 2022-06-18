@@ -1,11 +1,22 @@
 # 1. work flow
   ```
-  Code PR -- GitHub -- Jennkins --- when in (master/dev branch) --build/test           ----ON JENKINS ec2
-                                                                ---deploy to dev       ---on  jenkinsEC2
-                                    when in (production branch) ---deploy to prod       ---ON aws s3  ---> CLOUDFRONT(CDN) --->ROUTE 53 DOMAIN
+  Code PR -- GitHub -- Jennkins Pipeline ---Cloud
+
+  IF something pushed in MASTER/DEV Branch :
+        BUILD
+        TEST
+        DEPLOY by 'Npm START' in Jenkins NODE-JS AGENT
+
+        --> You can see a website at xxxxxxurl:3000
+
+  If something pushed in Prod Branch: 
+       BUILD
+       TEST
+       DEPLOY by 'NPM RUN BUILD' ---> upload THE build Folder to a Hosting e.g. S3 / Azure Blob
+                                            
   
-  
-  ```
+      ----> Folder upload to s3, you can use s3 url to visit the website ---> CLOUDFRONT(CDN) --->ROUTE 53 DOMAIN
+   ```
 # 2.WHAT I NEED
   ## 1 JENKINS ON EC2.
       ```
