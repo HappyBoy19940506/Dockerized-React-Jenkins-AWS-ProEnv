@@ -1,5 +1,5 @@
 # 1. work flow
-  ```
+```
   Code PR -- GitHub -- Jennkins Pipeline ---Cloud
 
   IF something pushed in MASTER/DEV Branch :
@@ -19,6 +19,7 @@
    ```
 # 2.WHAT I NEED
   ## 1 JENKINS ON EC2 OR VM
+  
       ```
       create a ec2 for Master Jenkins
       open port 8080 /3000 if build-in node /50000
@@ -29,7 +30,8 @@
       Create a ec2 for Slave Jenkins
       on Agent Node -->
       install Node JS ... version issue ?
-      ````
+      ```
+      
   ## 2 play JENKINS
      ```
      go in to jenkins
@@ -39,14 +41,14 @@
          -- FOR AZURE
          --BLUE OCEAN
      
-      
-      ````
+     
+      ```
 
   ## 3 code dockerize
       ```
       NO.  FRONT end does not need to dockerize.
       
-      ````
+      ```
 ## 4 deploy
     ```
     For dev
