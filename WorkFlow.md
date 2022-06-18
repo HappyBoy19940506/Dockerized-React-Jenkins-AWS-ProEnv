@@ -26,8 +26,8 @@
       install java
       install jenkins
       ----
-      install docker
-      
+      on Agent Node -->
+      install Node JS ... version issue ?
       ````
   ## 2 play JENKINS
      ```
