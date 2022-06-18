@@ -20,12 +20,13 @@
 # 2.WHAT I NEED
   ## 1 JENKINS ON EC2 OR VM
       ```
-      create a ec2 
+      create a ec2 for Master Jenkins
       open port 8080 /3000 if build-in node /50000
       ssh to ec2
       install java
       install jenkins
       ----
+      Create a ec2 for Slave Jenkins
       on Agent Node -->
       install Node JS ... version issue ?
       ````
