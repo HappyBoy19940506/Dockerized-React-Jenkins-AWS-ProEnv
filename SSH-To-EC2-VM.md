@@ -18,13 +18,13 @@
 ## Provide a path to your SSH private key file. 
 
 ```
-e.g /Users/user/.ssh/fxy4560654/Slave-Jenkins-for-Nodejs-ssh-key.pem
+e.g /Users/user/.ssh/fxy4560654/ssh-key.pem
 
 ```
 
 ## use SUDO
 
 ```
-sudo ssh -i /Users/user/.ssh/fxy4560654/Slave-Jenkins-for-Nodejs-ssh-key.pem fxy4560654@jenkinsslonment.australiaeast.cloudapp.azure.com
+sudo ssh -i /Users/user/.ssh/fxy4560654/ssh-key.pem fxy4560654@jenkinsslonment.australiaeast.cloudapp.azure.com
 
 ```
