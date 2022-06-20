@@ -94,15 +94,26 @@ xxx command not found
 ```
 
 # 4. react deploy to S3 index.html显示空白的问题
-```
-
-```
 ## Resolved: 
 ```
-1. folder
-2. package.json
-```
+npm run build生成build文件夹后，
+1. 在本地 index.html空白问题。 在打包之前,在package.json中private下(位置任意)添加"homepage": "./" ，再重新build一下。
+{
+  "name": "bookinglet",
+  "homepage": "./", <----------------------
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.2.0-beta1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
 
+2. S3上 hosting的 index.html显示空白 -->
+不能上传build文件夹，而要把里面的 所有文件上传。  
+```
 
 # 5. multiple-agent-labels-in-a-declarative-jenkins-pipeline
 
