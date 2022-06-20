@@ -13,6 +13,85 @@ sudo chmod 666 /var/run/docker.sock
 https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket
 
 
-2.
+# 2. 
 
-3.
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+
+
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+
+
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+
+
+
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+
+
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
