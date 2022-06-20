@@ -46,7 +46,7 @@ agent {
         stage('Hello') {
             steps {
                 sh 'whoami'
----------------> jenkins
+---------------> jenkins  or unknown userid 1312312
                 sh 'sudo apt-get update'
                 sh 'sudo apt install python3-pip -y'
                 sh 'sudo pip3 install awscli --upgrade'
