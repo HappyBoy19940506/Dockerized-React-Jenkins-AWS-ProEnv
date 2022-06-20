@@ -18,11 +18,9 @@ https://towardsaws.com/set-up-a-cloud-native-ci-cd-pipeline-in-under-7-minutes-u
 # How to install AWS CLI use apt-upgrade.
 ## 前提是 你要可以run apt.
 ```
-            // apt should work
+<!--            assuming apt should work -->
                 sh 'apt-get update'
                 sh 'apt install python3-pip -y'
                 sh 'pip3 install awscli --upgrade'
                 sh 'aws --version'
-
-
 ```
