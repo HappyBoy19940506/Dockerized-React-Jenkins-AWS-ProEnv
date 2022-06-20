@@ -5,7 +5,7 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 ```
 ## Resolved: 
 ```
-just open terminal and type this command
+just open terminal and type this command // 给 docker daemon抬旗， 直接最高权限运行
 
 sudo chmod 666 /var/run/docker.sock
 
