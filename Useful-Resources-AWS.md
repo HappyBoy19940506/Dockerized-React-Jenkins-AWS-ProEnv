@@ -15,3 +15,14 @@ https://medium.com/dailyjs/a-guide-to-deploying-your-react-app-with-aws-s3-inclu
 https://towardsaws.com/set-up-a-cloud-native-ci-cd-pipeline-in-under-7-minutes-using-aws-codepipeline-s3-and-codebuild-1b6166daf694
 
 ```
+# How to install AWS CLI use apt-upgrade.
+## 前提是 你要可以run apt.
+```
+            // apt should work
+                sh 'apt-get update'
+                sh 'apt install python3-pip -y'
+                sh 'pip3 install awscli --upgrade'
+                sh 'aws --version'
+
+
+```
