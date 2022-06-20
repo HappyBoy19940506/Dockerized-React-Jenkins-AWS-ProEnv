@@ -114,7 +114,9 @@ npm run build生成build文件夹后，
 2. S3上 hosting的 index.html显示空白 -->
 *不能上传build文件夹，而要把里面的 所有文件上传。  
 
-*如果上传的是文件夹，那么s3给你的url是空白页，请去cloudfront中设置origin default path,把它设置成 ./build/index.html
+
+*如果上传的是文件夹，那么s3给你的url是空白页，请去cloudfront中设置origin default path,把它设置成 ./build/index.html。 并且origindomianName选择s3的website entrypoint而不是 s3本身的地址。
+https://www.freecodecamp.org/news/how-to-host-and-deploy-a-static-website-or-jamstack-app-to-s3-and-cloudfront/#storing-your-website-on-s3
 ```
 
 # 5. multiple-agent-labels-in-a-declarative-jenkins-pipeline
