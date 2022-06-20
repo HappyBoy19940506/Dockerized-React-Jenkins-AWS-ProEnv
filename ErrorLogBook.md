@@ -81,23 +81,26 @@ agent {
     }
 }
 ```
-# 3. 
+# 3. 各种command not found
 
 ```
-Grs/jso
+xxx command not found
 ```
 ## Resolved: 
 ```
+1. 考虑所处的agent。 这台agent上 装了什么？有什么环境？
+
+2.考虑是不是在docker +image的环境下，这种container里 有什么环境？
 ```
 
-
-# 3. 
-
+# 4. react deploy to S3 index.html显示空白的问题
 ```
-Grs/jso
+
 ```
 ## Resolved: 
 ```
+1. folder
+2. package.json
 ```
 
 
