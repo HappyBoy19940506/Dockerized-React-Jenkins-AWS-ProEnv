@@ -5,7 +5,7 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 ```
 ## Resolved: 
 ```
-just open terminal and type this command // 给 docker daemon抬旗， 直接最高权限运行
+just open terminal and type this command // 在运行docker的那个agent里面 ，给 docker daemon抬旗， 直接最高权限运行
 
 sudo chmod 666 /var/run/docker.sock
 
@@ -16,7 +16,9 @@ https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permissio
 # 2. 
 
 ```
-Grs/jso
+运行一些命令时： 比如 apt-get update / aws cli install 这些命令时候， 提示: permission denied.
+
+
 ```
 ## Resolved: 
 ```
