@@ -112,7 +112,7 @@ npm run build生成build文件夹后，
   },
 
 2. S3上 hosting的 index.html显示空白 -->
-*不能上传build文件夹，而要把里面的 所有文件上传。你想啊，一个用户输入网址，www.xxx.com 不会输入www.xxx.com/homepage 这样，所以你一旦进入www.xx.com就相当于来到了root directory了，你得有个东西招待他呀，那root里面肯定要有个index.html啊，不然当然是光的了。
+*不能上传build文件夹，而要把里面的 所有文件上传。你想啊，一个用户输入网址，www.xxx.com 不会输入www.xxx.com/homepage 这样，所以你一旦进入www.xx.com就相当于来到了root directory了，你得有个东西招待他呀，那root里面肯定要有个index.html啊，不然当然是光的了。 S3 static hosting里面问你填index.html问的是你主页name叫什么，而不是主页的path是什么。
 
 
 *(???存疑）如果上传的是文件夹，那么s3给你的url是空白页，请去cloudfront中设置origin default path,把它设置成 ./build/index.html。 并且origindomianName选择s3的website entrypoint而不是 s3本身的地址。
