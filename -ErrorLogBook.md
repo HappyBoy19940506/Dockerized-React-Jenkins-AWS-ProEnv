@@ -232,7 +232,7 @@ Failed to compile.
 ```
 ## Resolved: 
 ```
-现在大部分项目都会支持ci工具来做持续集成，所以现在默认值为ci=true，这样让大部分的library会按照ci=true的环境来运行。
+现在大部分项目都会支持ci工具来做持续集成，所以现在默认值为ci=true，这样让大部分的library会按照ci=true的环境来运行.而不是local环境。
 但是有些library会因此报错，而且会halt build导致fail to compile。
 1. jenkinsifle 中 
  environment {
