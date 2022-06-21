@@ -353,13 +353,16 @@ tools {
 
 ----------------------------------------------------
 
-# 3. 
+# 13. How to create a Jenkins slave agent ?
 
 ```
-Grs/jso
+https://www.youtube.com/watch?v=-NUQhwmhTCw
+
+https://www.youtube.com/watch?v=99DddJiH7lM
 ```
 ## Resolved: 
 ```
+
 ```
 ----------------------------------------------------
 
