@@ -338,9 +338,16 @@ When we use nodejs for first time by referring to this name and run the job, jen
 
 From the next build it will use the nodejs from that folder, it won’t download everytime
 
-
 ```
 ### 也可以看作如下场景的work around： 你只有一个server或者agent，要在上面跑 不同版本的 nodejs,如何控制？？
+```
+tools {
+    nodejs "nodejs-14.14.0"
+}
+tools {
+    nodejs "nodejs-18.0.0"
+}
+```
 
 ----------------------------------------------------
 
