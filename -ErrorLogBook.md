@@ -303,13 +303,11 @@ git code ==等价于
 
 ----------------------------------------------------
 
-# 3. 
+# 10.  每一个pipeline都是一个job，每次build 并不会清空之前的文件夹
 
-```
-Grs/jso
-```
 ## Resolved: 
 ```
+create 一个新的pipeline的时候，会创建一个新的workspace，每次build的时候 比如会git clone repo的代码， 后面build如果不涉及重新clone 代码的话，代码还会存在，并不是每次build都重新起一个线程的， 这也就是为什么，你修改了config之后，明明没有任何get code from Github的操作，但是你还是能运行npm install等操作，他install的上次download下来的repo code
 ```
 ----------------------------------------------------
 
