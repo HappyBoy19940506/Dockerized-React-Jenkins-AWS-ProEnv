@@ -279,6 +279,30 @@ Master 现在叫main 了
 
 
 
+# 9. Why there is no Source Code Management tab in a Jenkins pipeline job?
+## Resolved: 
+```
+FreeStyle里面有soure code management来选定code来自哪个git-repo
+Pipeline里面其实也有，但是不叫Source Code Management,直接在选定jenkinsfile script form SCM下啦菜单的Repository URL就已经是该repo地址，因为他
+默认 jenkinsfile go with this repo together.
+
+-Script Path :指定 jenkisnfile在哪，有可能不在root，那你就要写 relative-path ,e.g.  ./cicd/jenkinsfile 
+
+-Branches to build : List of branches to build. Jenkins jobs are most effective when each job builds only a single branch. 不推荐 a single job builds multiple branches. 一个pipeline也就是一个job，一般只允许一个branch，规避multiple branch。
+
+
+git code ==等价于 
+在input script中写:
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+            }
+	   }
+```
+
+----------------------------------------------------
+
 # 3. 
 
 ```
@@ -287,3 +311,54 @@ Grs/jso
 ## Resolved: 
 ```
 ```
+----------------------------------------------------
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
