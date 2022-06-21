@@ -223,13 +223,32 @@ Jenkins pipeline how to change to another folder
 ```
 
 
-# 3. 
-
+# 7. Jenkins build fails with "Treating warnings as errors because of process.env.CI = true"
 ```
-Grs/jso
+[ERROR] {some text}: {some text} is outdated. Please run next command `npm update`
+[INFO] Treating warnings as errors because process.env.CI = true.
+[INFO] Most CI servers set it automatically.
+Failed to compile.
 ```
 ## Resolved: 
 ```
+现在大部分项目都会支持ci工具来做持续集成，所以现在默认值为ci=true，这样让大部分的library会按照ci=true的环境来运行。
+但是有些library会因此报错，而且会halt build导致fail to compile。
+1. jenkinsifle 中 
+ environment {
+        CI= 'false'
+    }
+2. 在 jenkins ui中，设置global config ->
+-You can set CI env variable to false through Manage Jenkins > Configure System > Global properties section.
+-Add a new env variable CI with the value false.
+3. 在package.json中更改，改成默认为 false:
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "CI=false && react-scripts build",  // Add CI=False here
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+
 ```
 
 
