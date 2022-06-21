@@ -325,11 +325,19 @@ create 一个新的pipeline的时候，会创建一个新的workspace，每次bu
 # 12.  jenkins agent中明明装了node js， 但是pipeline中缺显示报错 node command not found
 
 ```
+master server -- whoami --jenkins --- 如果在server上装了node --- can find command
+slave server -- whoami -- ssh-username ---如果在server上装了node --node command not found
+
 根本原因是 user的问题，你如果用agent运行，你默认的用户名为 你ssh的用户，也即为你server上安装nodejs的用户， 但是 pipeline中其实去找的用户名为 Jenkins，寻找名为Jenkins名下的nodejs文件。
 ```
 ## Resolved: 
 ```
-JENKINS GLOBAL CONFIGURATION
+Global Tool Configuration 帮你以Jenkins身份运行各版本，因为运行的是 
+
+When we use nodejs for first time by referring to this name and run the job, jenkins will automatically download the mnodejs tar file, extract and save it in /var/lib/jenkins/tools/ folder
+
+From the next build it will use the nodejs from that folder, it won’t download everytime
+
 
 ```
 ### 也可以看作如下场景的work around： 你只有一个server或者agent，要在上面跑 不同版本的 nodejs,如何控制？？
