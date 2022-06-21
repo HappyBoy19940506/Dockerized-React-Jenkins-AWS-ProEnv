@@ -322,7 +322,7 @@ create 一个新的pipeline的时候，会创建一个新的workspace，每次bu
 ```
 ----------------------------------------------------
 
-# 12.  jenkins agent中明明装了node js， 但是pipeline中缺显示报错 node command not found
+# 12.  jenkins agent中明明装了node js， 但是pipeline中缺显示报错 node command not found / Usage : Global Tool Configuration
 
 ```
 master server -- whoami --jenkins --- 如果在server上装了node --- can find command
@@ -341,6 +341,8 @@ From the next build it will use the nodejs from that folder, it won’t download
 ```
 ### 也可以看作如下场景的work around： 你只有一个server或者agent，要在上面跑 不同版本的 nodejs,如何控制？？
 ```
+https://devopspilot.com/content/jenkins/tutorials/common/03-global-tool-configurations
+
 tools {
     nodejs "nodejs-14.14.0"
 }
