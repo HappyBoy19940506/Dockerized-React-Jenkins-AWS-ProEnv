@@ -205,15 +205,22 @@ https://www.jenkins.io/doc/book/pipeline/syntax/
 
 
 
-# 3. 
+# 6. Jenkins pipeline how to change to another folder
 
 ```
-Grs/jso
+Jenkins pipeline how to change to another folder
 ```
 ## Resolved: 
+```steps {
+    sh "pwd"
+    dir('./your-sub-directory/dir') {
+      sh "pwd"
+    }
+    sh "pwd"
+} 
+<!-- dir后面的路径是按源根目录的root来算的路径，而不是 jenkinsifle所在的路径为根目录 -->
+<!-- 本来前端后端就不应该放在一个repo里面 -->
 ```
-```
-
 
 
 # 3. 
