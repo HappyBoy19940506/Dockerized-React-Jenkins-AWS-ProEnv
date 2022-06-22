@@ -327,6 +327,10 @@ create 一个新的pipeline的时候，会创建一个新的workspace，每次bu
 ```
 master server -- whoami --jenkins --- 如果在server上装了node --- can find command
 slave server -- whoami -- ssh-username ---如果在server上装了node --node command not found
+症状： -在jenkinsfile中如果执行whoami，在master- node中显示Jenkins，在slave-node中显示 ssh-username，
+      -在ssh界面执行 whoami，在master-node中显示ssh-username,在slave-node中显示 ssh-username.
+      -并且如果在ssh界面下安装了node，那么在jenkensifle中，master-node会显示 can find node, slave-node会显示can not find node.
+
 
 根本原因是 user的问题，你如果用agent运行，你默认的用户名为 你ssh的用户，也即为你server上安装nodejs的用户， 但是 pipeline中其实去找的用户名为 Jenkins，寻找名为Jenkins名下的nodejs文件。
 ```
@@ -367,10 +371,30 @@ https://www.youtube.com/watch?v=99DddJiH7lM
 3. 私钥 上传至Jenkins credentials， kind选择ssh username with private key, id随便叫 会显示在后面的keychain里面，就是credentials的名字，username随便叫，会显示在后续的选择下拉框里面，
 4. 公钥存在 slave上， vi ~/.ssh/authorized_keys ,把公钥加入， wq保存退出
 5.  Master controller上要装java, 再装jenkins, slave node上要装 java ！！！不然读不到remoting.jar
-5. manage nodes and clouds -- new node --
+5.  manage nodes and clouds -- new node --往下一步步填，特别注意Remote root directory项目
 ```
 ----------------------------------------------------
 
+# 14.  [SSH] WARNING: SSH Host Keys are not being verified. Man-in-the-middle attacks may be possible against this connection.
+
+## Resolved: 
+```
+一般选择 Non Host Key Verification Strategy , 如果要 去掉该warning， 参考 
+14:45 开始
+https://www.youtube.com/watch?v=99DddJiH7lM
+
+```
+----------------------------------------------------
+
+#15. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
 # 3. 
 
 ```
@@ -380,7 +404,78 @@ Grs/jso
 ```
 ```
 ----------------------------------------------------
+# 3. 
 
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
+# 3. 
+
+```
+Grs/jso
+```
+## Resolved: 
+```
+```
+----------------------------------------------------
 # 3. 
 
 ```
