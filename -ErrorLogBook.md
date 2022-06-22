@@ -91,6 +91,8 @@ xxx command not found
 1. 考虑所处的agent。 这台agent上 装了什么？有什么环境？
 
 2.考虑是不是在docker +image的环境下，这种container里 有什么环境？
+
+3. 如果确实装了，但就是 读不出来， 请移步问题12， 有可能是用户路径问题，你在a用户下装的命令，b用户下读不出命令，建议走问题12 global tool方法。
 ```
 
 # 4. react deploy to S3 index.html显示空白的问题
