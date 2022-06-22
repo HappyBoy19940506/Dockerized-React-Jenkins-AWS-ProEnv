@@ -383,6 +383,8 @@ https://www.youtube.com/watch?v=99DddJiH7lM
 14:45 开始
 https://www.youtube.com/watch?v=99DddJiH7lM
 
+大致思路： 报错是因为这个ssh key的ownership不是Jenkins，所以没有verify的。 我们要把 private key 复制粘贴到 Jenkins的 .ssh目录下，/var/lib/jenkins/.ssh 并且要让Jenkins拥有该ssh目录的ownership.
+
 ```
 ----------------------------------------------------
 
