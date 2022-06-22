@@ -371,7 +371,7 @@ https://www.youtube.com/watch?v=99DddJiH7lM
 3. 私钥 上传至Jenkins credentials， kind选择ssh username with private key, id随便叫 会显示在后面的keychain里面，就是credentials的名字，username随便叫，会显示在后续的选择下拉框里面，
 4. 公钥存在 slave上， vi ~/.ssh/authorized_keys ,把公钥加入， wq保存退出
 5.  Master controller上要装java, 再装jenkins, slave node上要装 java ！！！不然读不到remoting.jar
-5.  manage nodes and clouds -- new node --往下一步步填，特别注意Remote root directory项目
+5.  manage nodes and clouds -- new node --往下一步步填，特别注意Remote root directory项
 ```
 ----------------------------------------------------
 
@@ -386,31 +386,39 @@ https://www.youtube.com/watch?v=99DddJiH7lM
 ```
 ----------------------------------------------------
 
-#15. 
+# 15. [SSH] Remote file system root /agent2 does not exist. Will try to create it...
+# java.io.IOException: Could not copy remoting.jar into '/agent2' on agent
+# Caused by: com.trilead.ssh2.SFTPException: Permission denied (SSH_FX_PERMISSION_DENIED: The user does not have sufficient permissions to perform the operation.)
+
+## Resolved: 
+```
+该问题 属于 16.Remote root directory问题
 
 ```
-Grs/jso
+----------------------------------------------------
+# 16. Remote root directory
+
+```
+如果填 相对路径，默认前置为 /home/ssh-username/
+比如填写: data -->  /home/username/data 相对路径 会在user目录下生成data文件夹
+	/data --> /data 绝对路径，会直接跑root目录下生成文件夹，user都超过权限了管不了了 。这种是会报错的！
+	./data -->/home/username/data 相对路径 会在user目录下生成data文件夹
+	/home/username/data -->相对路径，一步到位，会在user目录下生成data文件夹
+
+所以如果你填错了 root directory ，你的ssh-user是没用权限 操作root目录下的文件的，就会报15. 里面的错误。
+
+巧记： 开头带上了 "/" , 就是绝对路径 ，就要填 /home/fxy4560654这种，否则必报错。
 ```
 ## Resolved: 
 ```
 ```
 ----------------------------------------------------
-# 3. 
+# 17.  # of exectuors 
 
-```
-Grs/jso
-```
 ## Resolved: 
 ```
-```
-----------------------------------------------------
-# 3. 
-
-```
-Grs/jso
-```
-## Resolved: 
-```
+1. 一般 Jenkins controller 上不放 exectuors，有安全风险。
+2. 一般 agent上放几个exectuors，取决于额有几个cpu或者vcpu,数量 小于等于。
 ```
 ----------------------------------------------------
 # 3. 
